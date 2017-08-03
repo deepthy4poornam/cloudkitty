@@ -15,7 +15,8 @@
 #
 # @author: Stéphane Albert
 #
-from oslo import i18n  # noqa
+#from oslo import i18n  # noqa
+import oslo_i18n as i18n  # noqa
 
 _translators = i18n.TranslatorFactory(domain='cloudkitty')
 i18n.enable_lazy()

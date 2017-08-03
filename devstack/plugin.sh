@@ -81,14 +81,17 @@ CLOUDKITTY_OUTPUT_BASEPATH=${CLOUDKITTY_OUTPUT_BASEPATH:-$CLOUDKITTY_REPORTS_DIR
 CLOUDKITTY_OUTPUT_PIPELINE=${CLOUDKITTY_OUTPUT_PIPELINE:-"osrf"}
 
 # Set Cloudkitty client info
-GITREPO["python-cloudkittyclient"]=${CLOUDKITTYCLIENT_REPO:-${GIT_BASE}/stackforge/python-cloudkittyclient.git}
+#GITREPO["python-cloudkittyclient"]=${CLOUDKITTYCLIENT_REPO:-${GIT_BASE}/stackforge/python-cloudkittyclient.git}
+#GITDIR["python-cloudkittyclient"]=$DEST/python-cloudkittyclient
+#GITBRANCH["python-cloudkittyclient"]=${CLOUDKITTYCLIENT_BRANCH:-master}
+GITREPO["python-cloudkittyclient"]=${CLOUDKITTYCLIENT_REPO:-https://github.com/openstack/python-cloudkittyclient.git}
 GITDIR["python-cloudkittyclient"]=$DEST/python-cloudkittyclient
-GITBRANCH["python-cloudkittyclient"]=${CLOUDKITTYCLIENT_BRANCH:-master}
+GITBRANCH["python-cloudkittyclient"]=${CLOUDKITTYCLIENT_BRANCH:-0.4.1}
 
 # Set CloudKitty dashboard info
-GITREPO["cloudkitty-dashboard"]=${CLOUDKITTYDASHBOARD_REPO:-${GIT_BASE}/stackforge/cloudkitty-dashboard.git}
+GITREPO["cloudkitty-dashboard"]=${CLOUDKITTYCLIENT_REPO:-https://github.com/openstack/cloudkitty-dashboard.git}
 GITDIR["cloudkitty-dashboard"]=$DEST/cloudkitty-dashboard
-GITBRANCH["cloudkitty-dashboard"]=${CLOUDKITTYDASHBOARD_BRANCH:-master}
+GITBRANCH["cloudkitty-dashboard"]=${CLOUDKITTYDASHBOARD_BRANCH:-0.4.1}
 
 # Tell Tempest this project is present
 TEMPEST_SERVICES+=,cloudkitty
